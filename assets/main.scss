@@ -3,6 +3,37 @@
 
 @import "minima";
 
+$accent: #2563eb;
+
+.site-header {
+  border-top: 5px solid $accent;
+}
+
+.site-title,
+.site-title:visited {
+  color: $accent;
+}
+
+a {
+  color: $accent;
+}
+
+a:visited {
+  color: #7c3aed;
+}
+
+a:hover {
+  color: darken($accent, 10%);
+}
+
+.post-link {
+  color: #1a1a1a;
+}
+
+.post-link:hover {
+  color: $accent;
+}
+
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #1a1a1a;
@@ -10,7 +41,6 @@
   }
 
   .site-header {
-    border-top-color: #444;
     border-bottom-color: #333;
   }
 
@@ -20,7 +50,7 @@
 
   .site-title,
   .site-title:visited {
-    color: #f5f5f5;
+    color: #6cb6ff;
   }
 
   .site-nav .page-link {
@@ -33,6 +63,14 @@
 
   a:visited {
     color: #b39ddb;
+  }
+
+  .post-link {
+    color: #e6e6e6;
+  }
+
+  .post-link:hover {
+    color: #6cb6ff;
   }
 
   .post-content,
