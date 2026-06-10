@@ -88,14 +88,18 @@ a:hover {
 }
 
 .work-card {
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
   padding: 16px 20px;
   border: 1px solid #eee;
   border-left: 4px solid $accent;
   border-radius: 6px;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
+
+  .work-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
 
   .work-icon {
     flex-shrink: 0;
@@ -103,11 +107,22 @@ a:hover {
   }
 
   h3 {
-    margin: 0 0 8px;
+    margin: 0;
   }
 
   p {
     margin: 0;
+  }
+
+  .work-screenshot {
+    margin-top: 12px;
+
+    img {
+      display: block;
+      width: 100%;
+      border-radius: 6px;
+      border: 1px solid #eee;
+    }
   }
 }
 
@@ -212,5 +227,9 @@ a:hover {
   .work-card {
     border-color: #333;
     border-left-color: #ff6b6b;
+
+    .work-screenshot img {
+      border-color: #333;
+    }
   }
 }
