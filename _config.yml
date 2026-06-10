@@ -2,6 +2,7 @@ title: "うめのAI挑戦記"
 description: "プログラミング未経験の大学生が、AIを使ってツールを作り、稼ぐまでの記録"
 theme: minima
 x_username: "Umezawaqjyh"
+permalink: /:year/:month/:day/:title.html
 
 header_pages:
   - works.md
