@@ -1,17 +1,33 @@
 ---
 ---
 
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap');
+
+$text-color: #33302c !default;
+$background-color: #faf6f0 !default;
+$base-line-height: 1.75 !default;
+$spacing-unit: 40px !default;
+$base-font-family: "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif !default;
+
 @import "minima";
 
-$accent: #e63946;
+$accent: #9e2a2b;
+$divider-color: #e8ddd0;
+
+h1, h2, h3, h4, h5, h6,
+.site-title {
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 0.04em;
+}
 
 .site-header {
-  border-top: 5px solid $accent;
+  border-top: 3px solid $accent;
 }
 
 .site-title,
 .site-title:visited {
   color: $accent;
+  letter-spacing: 0.12em;
 }
 
 a {
@@ -19,19 +35,29 @@ a {
 }
 
 a:visited {
-  color: #9f1239;
+  color: #6e2326;
 }
 
 a:hover {
-  color: darken($accent, 10%);
+  color: darken($accent, 8%);
 }
 
 .post-link {
-  color: #1a1a1a;
+  color: $text-color;
 }
 
 .post-link:hover {
   color: $accent;
+}
+
+.post-meta {
+  color: #9c8f82;
+}
+
+.post-content {
+  p, li {
+    line-height: 1.9;
+  }
 }
 
 .intro {
@@ -40,7 +66,7 @@ a:hover {
   gap: 24px;
   margin-bottom: 40px;
   padding-bottom: 24px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid $divider-color;
 
   .intro-icon {
     width: 80px;
@@ -69,14 +95,14 @@ a:hover {
 .post-list {
   > li {
     padding: 16px 20px;
-    border: 1px solid #eee;
+    border: 1px solid $divider-color;
     border-left: 4px solid $accent;
     border-radius: 6px;
     margin-bottom: 16px;
     transition: box-shadow 0.2s ease, transform 0.2s ease;
 
     &:hover {
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 4px 12px rgba(158, 42, 43, 0.08);
       transform: translateY(-2px);
     }
   }
@@ -89,7 +115,7 @@ a:hover {
 
 .work-card {
   padding: 16px 20px;
-  border: 1px solid #eee;
+  border: 1px solid $divider-color;
   border-left: 4px solid $accent;
   border-radius: 6px;
   margin-bottom: 24px;
@@ -121,7 +147,7 @@ a:hover {
       display: block;
       width: 100%;
       border-radius: 6px;
-      border: 1px solid #eee;
+      border: 1px solid $divider-color;
     }
   }
 }
@@ -160,76 +186,80 @@ a:hover {
 
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #1a1a1a;
-    color: #e6e6e6;
+    background-color: #211c19;
+    color: #ece6e1;
   }
 
   .site-header {
-    border-bottom-color: #333;
+    border-bottom-color: #3a322c;
   }
 
   .site-footer {
-    border-top-color: #333;
+    border-top-color: #3a322c;
   }
 
   .site-title,
   .site-title:visited {
-    color: #ff6b6b;
+    color: #e08a86;
   }
 
   .site-nav .page-link {
-    color: #e6e6e6;
+    color: #ece6e1;
   }
 
   a {
-    color: #ff6b6b;
+    color: #e08a86;
   }
 
   a:visited {
-    color: #fda4af;
+    color: #d3a8a6;
   }
 
   .post-link {
-    color: #e6e6e6;
+    color: #ece6e1;
   }
 
   .post-link:hover {
-    color: #ff6b6b;
+    color: #e08a86;
   }
 
   .post-content,
   .post-list,
   h1, h2, h3, h4, h5, h6 {
-    color: #e6e6e6;
+    color: #ece6e1;
+  }
+
+  .post-meta {
+    color: #b8a99a;
   }
 
   .social-media-list a {
-    color: #ff6b6b;
+    color: #e08a86;
   }
 
   .intro {
-    border-bottom-color: #333;
+    border-bottom-color: #3a322c;
 
     h2 {
-      color: #ff6b6b;
+      color: #e08a86;
     }
   }
 
   .post-list > li {
-    border-color: #333;
-    border-left-color: #ff6b6b;
+    border-color: #3a322c;
+    border-left-color: #e08a86;
 
     &:hover {
-      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
   }
 
   .work-card {
-    border-color: #333;
-    border-left-color: #ff6b6b;
+    border-color: #3a322c;
+    border-left-color: #e08a86;
 
     .work-screenshot img {
-      border-color: #333;
+      border-color: #3a322c;
     }
   }
 }
